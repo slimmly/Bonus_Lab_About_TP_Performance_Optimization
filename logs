@@ -1,0 +1,40 @@
+修改前：
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=300s scale=1 items=100000 cust/dist=3000
+
+=========== TPC-C Result ===========
+duration:  345.234 s
+committed: 38
+aborted:   254
+TPS (commit/s): 0.11007
+tpmC (NewOrder/min approx): 2.9719
+latency p50/p95/p99 (us): 4858108 / 97545464 / 97545464
+
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=60s scale=10 items=10000 cust/dist=300
+
+=========== TPC-C Result ===========
+duration:  61.3536 s
+committed: 142
+aborted:   805
+TPS (commit/s): 2.31445
+tpmC (NewOrder/min approx): 62.4903
+latency p50/p95/p99 (us): 952 / 5839575 / 5839575
+修改后：
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=300s scale=1 items=100000 cust/dist=3000
+
+=========== TPC-C Result ===========
+duration:  311.522 s
+committed: 232
+aborted:   1791
+TPS (commit/s): 0.744732
+tpmC (NewOrder/min approx): 20.1078
+latency p50/p95/p99 (us): 2479 / 9761098 / 12162811
+
+[driver] host=127.0.0.1 port=8765 warehouses=1 threads=4 duration=60s scale=10 items=10000 cust/dist=300
+
+=========== TPC-C Result ===========
+duration:  60.6105 s
+committed: 1143
+aborted:   8293
+TPS (commit/s): 18.8581
+tpmC (NewOrder/min approx): 509.17
+latency p50/p95/p99 (us): 1275 / 413563 / 436676
